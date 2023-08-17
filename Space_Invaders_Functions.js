@@ -28,15 +28,15 @@ function Alien(x, y, type) {
 	this.img = new Image();
 
 	if (type == "crab") {
-		this.img.src = "crab1.png";
+		this.img.src = "Crab1.png";
 	} else if (type == "octopus") {
-		this.img.src = "octopus1.png"
+		this.img.src = "Octopus1.png"
 	} else if (type == "squid") {
-		this.img.src = "squid1.png"
+		this.img.src = "Squid1.png"
 	} else if (type == "ufo") {
 		this.w = 80;
 		this.h = 40;
-		this.img.src = "ufo.png";
+		this.img.src = "UFO.png";
 	}
 }
 
@@ -47,7 +47,7 @@ Alien.prototype.draw = function() {
 Alien.prototype.update = function() {
 	let x = this.img.src;
 
-	if (x != "file:///C:/Users/Mwayi/Desktop/HTML,%20CSS,%20and%20JS%20Programs/Space%20Invaders/ufo.png") {
+	if (x.indexOf("UFO.png") == -1) {
 		this.number++;
 
 		this.img.src = x.substring(0, x.length-5) + (this.number%2+1) + ".png";
